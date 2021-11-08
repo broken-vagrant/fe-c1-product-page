@@ -1,0 +1,37 @@
+.product {
+  .images {
+    width: 45%;
+    float: left;
+    padding-right: 8rem;
+  }
+  .details {
+    width: 45%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 2rem;
+    &__company {
+      color: $color-primary;
+      letter-spacing: .2rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 4rem;
+      margin: 1rem 0;
+    }
+    p {
+      color: $color-darkgrayish-blue;
+      margin: 2rem 0 2rem;
+    }
+    &__addquant {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      > * + * {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

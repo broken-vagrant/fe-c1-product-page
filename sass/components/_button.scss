@@ -1,0 +1,19 @@
+.btn {
+  font-size: 1.5em;
+  vertical-align: middle;
+  border-radius: .5em;
+  text-align: center;
+  cursor: pointer;
+  background-color: $color-primary;
+  color: white;
+  padding: .7em 3em;
+  border: 1px solid transparent;
+  font-weight: bold;
+  position: relative;
+  &:hover {
+    background: lighten($color-primary, 10%); 
+  }
+  &:active {
+
+  }
+}

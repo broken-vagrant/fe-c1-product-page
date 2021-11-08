@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo-nav">
+      <div class="header__logo">
+        <h1>
+          sneakers
+        </h1>
+      </div>
+      <nav class="header__nav">
+        <a href="#">
+          <span>Collections</span>
+        </a>
+        <a href="#">
+          <span>Men</span>
+        </a>
+        <a href="#">
+          <span>Women</span>
+        </a>
+        <a href="#">
+          <span>About</span>
+        </a>
+        <a href="#">
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
+    <div class="header__usermenu">
+      <button type="button" class="header__usermenu--cart">
+      </button>
+      <button type="button" class="header__usermenu--avatar">
+        <img src="./images/image-avatar.png" alt="user avatar" />
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="product">
+      <section class="images">
+        <div class="product__gallery">
+          <div class="product__gallery--activeimage">
+            <img src="./images/image-product-1.jpg" alt="product 1 image" />
+          </div>
+          <div class="product__gallery--altimages">
+            <div>
+              <img src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail image" />
+            </div>
+            <div>
+              <img src="./images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail image" />
+            </div>
+            <div>
+              <img src="./images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail image" />
+            </div>
+            <div>
+              <img src="./images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="details">
+        <div class="details__company">
+          SNEAKER COMPANY
+        </div>
+        <h2>Fall Limited Sneakers</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum cum ratione perferendis corporis quae quidem,
+          officia unde, porro ex minima, qui suscipit sunt quos. Laboriosam illum voluptatibus repellat corrupti
+          quaerat.
+        </p>
+        <div class="cost__info">
+          <div class="cost__info__price">
+            <div class="cost__info__price--special">
+              $125.00
+            </div>
+            <div class="cost__info__price--actual">
+              $250.00
+            </div>
+          </div>
+          <div class="cost__info--discount">
+            50%
+          </div>
+        </div>
+        <div class="details__addquant">
+          <div class="quant__adder">
+            <button class="quant__adder--minus"></button>
+            <span>3</span>
+            <button class="quant__adder--plus"></button>
+          </div>
+          <button class="btn">
+            <i class="icon icon__cart"></i>
+            Add to cart
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

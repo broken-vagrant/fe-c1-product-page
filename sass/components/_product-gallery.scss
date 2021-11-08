@@ -1,0 +1,27 @@
+.product__gallery {
+  &--activeimage {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: .8rem;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+  &--altimages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    > div {
+      width: 10rem;
+      height: 10rem;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      object-fit: fill;
+      border-radius: .8rem;
+    }
+  }
+}

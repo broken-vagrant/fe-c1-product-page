@@ -1,0 +1,34 @@
+.quant__adder {
+  display: flex;
+  align-items: center;
+  background-color: $color-lightergrayish-blue;
+  font-size: 1rem;
+  &--minus,&--plus {
+    border-radius: .5em;
+    padding: 1.5em 1em;
+    width: 1em;
+    height: 1em;
+    border: none;
+    color: $color-primary;
+    font-weight: 400;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-lightgrayish-blue;
+    }
+    &:active{
+      background-color: $color-grayish-blue;
+    }
+  }
+  &--minus {
+    background: url($image-path + "/icon-minus.svg") no-repeat center;  
+  }
+  &--plus {
+    background: url($image-path + "/icon-plus.svg") no-repeat center;  
+  }
+  span {
+    min-width: 6ch;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}

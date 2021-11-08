@@ -1,0 +1,27 @@
+.cost__info {
+  font-size: 1rem;
+  position: relative;
+  &__price {
+    float: left;
+    &--special {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: .2em;
+    }
+    &--actual {
+      color: $color-darkgrayish-blue;
+      font-size: 1.5em;
+      text-decoration: line-through;
+    }
+  }
+  &--discount {
+    margin-left: 1em;
+    float: left;
+    display: inline-block;
+    padding: .5em .8em;
+    border-radius: .3em;
+    background-color: $color-primary-light;
+    color: $color-primary;
+    font-weight: bold;
+  }
+}

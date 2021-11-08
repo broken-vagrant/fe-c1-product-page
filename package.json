@@ -1,0 +1,12 @@
+{
+  "name": "ecommerce-product-page-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass sass/index.scss css/index.css -w sass/**/*.scss"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

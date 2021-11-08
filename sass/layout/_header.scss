@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  border-bottom: 1px solid $color-lightgrayish-blue;
+  user-select: none;
+
+  &__logo-nav {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 1.4rem;
+  }
+  &__nav {
+    margin-left: 4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    > a + a {
+      margin-left: 3rem;
+    }
+    a {
+      font-size: 1.4rem; 
+      text-decoration: none;
+      color: $color-darkgrayish-blue;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+      &:hover {
+        color: $color-darkblue;
+      }
+      &:hover:after{
+       border-bottom: 3px solid $color-primary;
+      }
+    }
+  }
+  &__usermenu {
+    display: flex;
+    align-items: center;
+
+    &--cart {
+      width: 4rem;
+      height: 4rem;
+      background: url($image-path+"/icon-cart.svg") no-repeat center;
+      border: none;
+      margin-right: 2rem;
+      cursor: pointer;
+    }
+    &--avatar {
+      cursor: pointer;
+      background: transparent;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+      border: 2px solid transparent;
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+      &:active {
+        border: 2px solid $color-primary;
+      }
+    }
+  }
+}
