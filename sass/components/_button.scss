@@ -10,10 +10,20 @@
   border: 1px solid transparent;
   font-weight: bold;
   position: relative;
+  user-select: none;
+  transition: all .2s linear;
+  svg {
+    margin: 0 .2em;
+    vertical-align: top;
+  }
+  svg path {
+    fill: currentColor;
+  }
   &:hover {
     background: lighten($color-primary, 10%); 
+    box-shadow: 0 1px 1px hsla(0deg, 0% ,0% ,0.075),0 2px 2px hsla(0deg ,0%, 0% ,0.075),0 4px 4px hsla(0deg ,0%, 0%, 0.075),0 8px 8px hsla(0deg ,0%, 0% , 0.075),0 16px 16px hsla(0deg, 0% ,0%,  0.075);
   }
-  &:active {
-
+  &:hover:active {
+    box-shadow: none;
   }
 }

@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <link rel="stylesheet" href="css/index.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="./js/dialog.js"></script>
 </head>
 
 <body>
@@ -51,22 +51,22 @@
     <div class="product">
       <section class="images">
         <div class="product__gallery">
-          <div class="product__gallery--activeimage">
+          <button class="product__gallery--preview" onclick="openDialog('lighthbox_dialog',this)">
             <img src="./images/image-product-1.jpg" alt="product 1 image" />
-          </div>
+          </button>
           <div class="product__gallery--altimages">
-            <div>
+            <button class="product__gallery__item active">
               <img src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail image" />
-            </div>
-            <div>
+            </button>
+            <button class="product__gallery__item">
               <img src="./images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail image" />
-            </div>
-            <div>
+            </button>
+            <button class="product__gallery__item">
               <img src="./images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail image" />
-            </div>
-            <div>
+            </button>
+            <button class="product__gallery__item">
               <img src="./images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail image" />
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -100,7 +100,11 @@
             <button class="quant__adder--plus"></button>
           </div>
           <button class="btn">
-            <i class="icon icon__cart"></i>
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D" fill-rule="nonzero" />
+            </svg>
             Add to cart
           </button>
         </div>
@@ -111,6 +115,41 @@
   <footer>
 
   </footer>
+  <div id="modalRoot">
+    <div id="lighthbox_dialog" role="dialog" aria-label="product gallery lightbox" aria-modal="true" class="hidden">
+      <div class="lightbox">
+        <button class="lightbox__close-btn" onclick="closeDialog(this)">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#69707D" fill-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="lightbox__preview">
+          <img src="./images/image-product-1.jpg" alt="product 1 preview 1" />
+        </div>
+        <div class="lightbox__gallery">
+          <button class="lightbox__gallery__item active">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail image 1" />
+            <span class="overlay"></span>
+          </button>
+          <button class="lightbox__gallery__item">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail image 2" />
+            <span class="overlay"></span>
+          </button>
+          <button class="lightbox__gallery__item">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail image 3" />
+            <span class="overlay"></span>
+          </button>
+          <button class="lightbox__gallery__item">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail image 4" />
+            <span class="overlay"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
 
 </html>

@@ -3,9 +3,10 @@
   align-items: center;
   background-color: $color-lightergrayish-blue;
   font-size: 1rem;
+  border-radius: .5em;
   &--minus,&--plus {
     border-radius: .5em;
-    padding: 1.5em 1em;
+    padding: 1.5em 1.3em;
     width: 1em;
     height: 1em;
     border: none;

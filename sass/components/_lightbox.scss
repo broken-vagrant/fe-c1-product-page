@@ -1,0 +1,70 @@
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  position: relative;
+  max-width: 640px;
+  &__close-btn {
+    background: none;
+    cursor: pointer;
+    align-self: flex-end;
+    border: none;
+    transform: scale(1.5);
+    padding: .5rem;
+    z-index: 1;
+    svg {
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+  &__preview {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+  &__gallery {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 0;
+
+    &__item {
+      width: 7rem;
+      height: 7rem;
+      position: relative;
+      cursor: pointer;
+      border-radius: 1.1rem;
+      background: none;
+      border: 2px solid transparent;
+      transition: opacity .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      img {
+        width: 100%;
+        object-fit: fill;
+        border-radius: 1rem;
+      }
+      .overlay {
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+      }
+    }
+    &__item.active {
+      border: 2px solid $color-primary;
+    }
+    &__item.active .overlay {
+      background: rgba(255, 255, 255, 0.589);
+    }
+    &__item:hover .overlay {
+      background: rgba(255, 255, 255, 0.411);
+    }
+  }
+}

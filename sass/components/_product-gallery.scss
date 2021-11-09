@@ -1,10 +1,14 @@
 .product__gallery {
-  &--activeimage {
+  user-select: none;
+  &--preview {
     position: relative;
+    background: none;
+    cursor: pointer;
     width: 100%;
+    border: none;
     img {
       width: 100%;
-      border-radius: .8rem;
+      border-radius: 1rem;
       object-fit: fill;
       object-position: center;
     }
@@ -13,15 +17,30 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
-    > div {
-      width: 10rem;
-      height: 10rem;
-      position: relative;
-    }
+  }
+
+  &__item {
+    width: 8.5rem;
+    height: 8.5rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 1.1rem;
+    background: none;
+    border: 2px solid transparent;
+    transition: opacity .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     img {
       width: 100%;
       object-fit: fill;
-      border-radius: .8rem;
+      border-radius: 1rem;
     }
+  }
+  &__item.active {
+    border: 2px solid $color-primary;
+  }
+  &__item.active img {
+    opacity: .3;
+  }
+  &__item:hover img {
+    opacity: .5;
   }
 }
