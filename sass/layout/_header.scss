@@ -4,6 +4,7 @@
   height: 10rem;
   border-bottom: 1px solid $color-lightgrayish-blue;
   user-select: none;
+  background: $color-white;
 
   &__logo-nav {
     display: flex;
@@ -11,6 +12,8 @@
   }
   &__logo {
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
   }
   &__nav {
     margin-left: 4rem;
@@ -44,21 +47,26 @@
   &__usermenu {
     display: flex;
     align-items: center;
+    font-size: 1rem;
 
     &--cart {
-      width: 4rem;
-      height: 4rem;
+      width: 4em;
+      height: 4em;
       background: url($image-path+"/icon-cart.svg") no-repeat center;
       border: none;
-      margin-right: 2rem;
+      margin-right: 1.5em;
       cursor: pointer;
+      @media screen  and (max-width: $vw-mobile-min) {
+        width: 2em;
+        height: 2em;
+      }
     }
     &--avatar {
       cursor: pointer;
       background: transparent;
       border-radius: 50%;
-      width: 5rem;
-      height: 5rem;
+      width: 5em;
+      height: 5em;
       position: relative;
       border: 2px solid transparent;
       img {
@@ -68,6 +76,36 @@
       &:active {
         border: 2px solid $color-primary;
       }
+      @media screen  and (max-width: $vw-mobile-min) {
+        width: 2em;
+        height: 2em;
+      }
+    }
+    @media screen  and (max-width: $vw-mobile-min){
+      font-size: .8rem;
+    }
+  }
+  &__mobile-nav-menu {
+    background: none;
+    border: 0;
+    display: none;
+    padding: .5rem;
+    margin-right: .6rem;
+    margin-top: .6rem;
+    cursor: pointer;
+  }
+  @media screen  and (max-width: $vw-mobile-min){
+    padding: .5rem;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: none;
+    &__mobile-nav-menu {
+      display: block;
+    }
+    &__nav {
+      display: none;
     }
   }
 }

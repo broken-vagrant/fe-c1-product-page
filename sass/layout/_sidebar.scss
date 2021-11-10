@@ -1,0 +1,55 @@
+.sidebar {
+  background: $color-white;
+  height: 100%;
+  position: fixed;
+  right: auto;
+  left: 0;
+  top: 0;
+  width: 85%;
+  z-index: 20;
+  max-width: 20rem;
+  transform: translateX(-100%);
+  transition: transform 100ms ease-out;
+  padding: 1.2rem;
+  .close-btn {
+    padding: 1rem;
+    background: none;
+    border: none;
+    svg {
+      transform: scale(1.5);
+    }
+  }
+  &__navlist {
+    list-style: none;
+    margin-top: 3rem;
+    &-item {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 0 1rem;
+    }
+    &-item + &-item {
+      margin-top: .9rem;
+    }
+    a {
+      color: $color-darkblue;
+      text-decoration: none;
+      padding: 1rem 0;
+    }
+  }
+}
+.sidebar.active {
+  transform: translateX(0%);
+}
+.sidebar.active + .sidebar_scrim {
+  background-color: rgba(0,0,0,.32);
+  display: block;
+}
+.sidebar_scrim {
+  display: none;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}

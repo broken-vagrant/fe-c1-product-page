@@ -12,10 +12,11 @@
     transform: scale(1.5);
     padding: .5rem;
     z-index: 1;
-    svg {
-      path {
-        fill: $color-primary;
-      }
+    svg path {
+      fill: $color-lightergrayish-blue;
+    }
+    &:hover > svg path {
+      fill: $color-primary;
     }
   }
   &__preview {
@@ -29,6 +30,31 @@
       border-radius: 1rem;
       object-fit: fill;
       object-position: center;
+    }
+    &--previous,&--next {
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      background: $color-lightergrayish-blue;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      color: $color-primary;
+      cursor: pointer;
+      &:hover > svg path{
+        stroke: $color-primary;
+      }
+    }
+    &--previous {
+      top: 49%;
+      left: 0;
+      transform: translate(-50%,-50%);
+    }
+    &--next {
+      top: 49%;
+      right: 0;
+      transform: translate(50%,-50%);
     }
   }
   &__gallery {

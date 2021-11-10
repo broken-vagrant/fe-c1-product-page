@@ -1,5 +1,5 @@
 .btn {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   vertical-align: middle;
   border-radius: .5em;
   text-align: center;
@@ -12,6 +12,7 @@
   position: relative;
   user-select: none;
   transition: all .2s linear;
+  width: 100%;
   svg {
     margin: 0 .2em;
     vertical-align: top;

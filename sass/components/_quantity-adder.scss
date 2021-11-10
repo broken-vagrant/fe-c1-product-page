@@ -4,6 +4,8 @@
   background-color: $color-lightergrayish-blue;
   font-size: 1rem;
   border-radius: .5em;
+  width: 100%;
+  justify-content: space-between;
   &--minus,&--plus {
     border-radius: .5em;
     padding: 1.5em 1.3em;

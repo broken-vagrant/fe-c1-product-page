@@ -1,25 +1,67 @@
 .product__gallery {
   user-select: none;
-  &--preview {
+  .stage {
     position: relative;
     background: none;
-    cursor: pointer;
     width: 100%;
     border: none;
+    &__img--active {
+      cursor: pointer;
+      background: none;
+      border: none;
+      @media screen and (max-width: $vw-mobile-min){
+          pointer-events: none;
+      }
+    }
+    &__img--prev,&__img--next {
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      background: $color-lightergrayish-blue;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      color: $color-primary;
+      cursor: pointer;
+      &:hover > svg path{
+        stroke: $color-primary;
+      }
+      @media screen and (min-width: $vw-mobile-min){
+        display: none;
+      }
+    }
+    &__img--prev {
+      top: 49%;
+      left: 10%;
+      transform: translate(-50%,-50%);
+    }
+    &__img--next {
+      top: 49%;
+      right: 10%;
+      transform: translate(50%,-50%);
+    }
     img {
       width: 100%;
       border-radius: 1rem;
       object-fit: fill;
       object-position: center;
+
+      @media screen  and (max-width: $vw-mobile-min){
+        border-radius: 0;
+      }
     }
   }
-  &--altimages {
+  .altimages {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    @media screen  and (max-width: $vw-mobile-min){
+      display: none;
+    }
   }
 
-  &__item {
+  .item {
     width: 8.5rem;
     height: 8.5rem;
     position: relative;
@@ -34,13 +76,13 @@
       border-radius: 1rem;
     }
   }
-  &__item.active {
+  .item.active {
     border: 2px solid $color-primary;
   }
-  &__item.active img {
+  .item.active img {
     opacity: .3;
   }
-  &__item:hover img {
+  .item:hover img {
     opacity: .5;
   }
 }

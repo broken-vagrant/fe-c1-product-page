@@ -1,36 +1,77 @@
 .product {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  @media screen and (max-width: $vw-mobile-min){
+    font-size: .7rem;
+  }
   .images {
     width: 45%;
     float: left;
-    padding-right: 8rem;
+    padding-right: 8em;
+    @media screen and (max-width: $vw-mobile-min) {
+      width: 100%;
+      float: unset;
+      display: block;
+      padding: 0;
+    }
   }
   .details {
     width: 45%;
     float: left;
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 2rem;
+    padding: 4em 0 2em;
+    @media screen and (max-width: $vw-mobile-min) {
+      width: 100%;
+      float: unset;
+      display: block;
+      padding: 1em;
+    }
     &__company {
       color: $color-primary;
-      letter-spacing: .2rem;
-      font-size: 1.3rem;
+      letter-spacing: .2em;
+      font-size: 1.3em;
       font-weight: bold;
       text-transform: uppercase;
     }
     h2 {
-      font-size: 4rem;
-      margin: 1rem 0;
+      font-size: 4em;
+      margin: 1em 0;
+
+      @media screen and (max-width: $vw-mobile-min){
+        font-size: 3em;
+        margin: .5em 0;
+      }
     }
     p {
       color: $color-darkgrayish-blue;
-      margin: 2rem 0 2rem;
+      margin: 2em 0;
+
+      @media screen and (max-width: $vw-mobile-min){
+        margin: 1.5em 0 2em;
+        font-size: 2em;
+      }
     }
     &__addquant {
-      margin-top: 2rem;
+      margin-top: 2em;
       display: flex;
       align-items: center;
-      > * + * {
-        margin-left: 1rem;
+      .container {
+        flex-grow: 0;
+      }
+      .container + .container {
+        margin-left: 1em;
+      } 
+      @media screen  and (max-width: $vw-mobile-min){
+        flex-direction: column;
+        .container {
+          width: 100%;
+          flex-grow: 1;
+        }
+        .container + .container {
+          margin-left: 0;
+          margin-top: 2em;
+        } 
       }
     }
   }

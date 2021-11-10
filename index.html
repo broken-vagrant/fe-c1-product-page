@@ -17,6 +17,11 @@
   <header class="header">
     <div class="header__logo-nav">
       <div class="header__logo">
+        <button class="header__mobile-nav-menu">
+          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
+          </svg>
+        </button>
         <h1>
           sneakers
         </h1>
@@ -47,24 +52,65 @@
       </button>
     </div>
   </header>
+  <aside class="sidebar active">
+    <nav>
+      <button aria-label="close sidebar" class="close-btn">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+            fill="#69707D" fill-rule="evenodd" />
+        </svg>
+      </button>
+      <ul class="sidebar__navlist">
+        <li class="sidebar__navlist-item">
+          <a href="#">Collections</a>
+        </li>
+        <li class="sidebar__navlist-item">
+          <a href="#">Men</a>
+        </li>
+        <li class="sidebar__navlist-item">
+          <a href="#">Women</a>
+        </li>
+        <li class="sidebar__navlist-item">
+          <a href="#">About</a>
+        </li>
+        <li class="sidebar__navlist-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="sidebar_scrim" role="presentation"></div>
   <main>
     <div class="product">
       <section class="images">
         <div class="product__gallery">
-          <button class="product__gallery--preview" onclick="openDialog('lighthbox_dialog',this)">
-            <img src="./images/image-product-1.jpg" alt="product 1 image" />
-          </button>
-          <div class="product__gallery--altimages">
-            <button class="product__gallery__item active">
+          <div class="stage">
+            <button onclick="openDialog('lighthbox_dialog',this)" class="stage__img--active">
+              <img src="./images/image-product-1.jpg" alt="product 1 image" />
+            </button>
+            <button class="stage__img--prev" aria-label="previous image">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+            </button>
+            <button class="stage__img--next" aria-label="next image">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          <div class="altimages">
+            <button class="item active">
               <img src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail image" />
             </button>
-            <button class="product__gallery__item">
+            <button class="item">
               <img src="./images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail image" />
             </button>
-            <button class="product__gallery__item">
+            <button class="item">
               <img src="./images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail image" />
             </button>
-            <button class="product__gallery__item">
+            <button class="item">
               <img src="./images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail image" />
             </button>
           </div>
@@ -74,39 +120,39 @@
         <div class="details__company">
           SNEAKER COMPANY
         </div>
-        <h2>Fall Limited Sneakers</h2>
+        <h2>Fall Limited Edition Sneakers</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum cum ratione perferendis corporis quae quidem,
           officia unde, porro ex minima, qui suscipit sunt quos. Laboriosam illum voluptatibus repellat corrupti
           quaerat.
         </p>
         <div class="cost__info">
-          <div class="cost__info__price">
-            <div class="cost__info__price--special">
-              $125.00
-            </div>
-            <div class="cost__info__price--actual">
-              $250.00
-            </div>
+          <div class="cost__info__pd">
+            <span class="price">$125.00</span>
+            <span class="discount">50%</span>
           </div>
-          <div class="cost__info--discount">
-            50%
+          <div>
+            <span class="actual-price">$250.00</span>
           </div>
         </div>
         <div class="details__addquant">
-          <div class="quant__adder">
-            <button class="quant__adder--minus"></button>
-            <span>3</span>
-            <button class="quant__adder--plus"></button>
+          <div class="container">
+            <div class="quant__adder">
+              <button class="quant__adder--minus"></button>
+              <span>3</span>
+              <button class="quant__adder--plus"></button>
+            </div>
           </div>
-          <button class="btn">
-            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                fill="#69707D" fill-rule="nonzero" />
-            </svg>
-            Add to cart
-          </button>
+          <div class="container">
+            <button class="btn">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D" fill-rule="nonzero" />
+              </svg>
+              Add to cart
+            </button>
+          </div>
         </div>
       </section>
 
@@ -118,8 +164,8 @@
   <div id="modalRoot">
     <div id="lighthbox_dialog" role="dialog" aria-label="product gallery lightbox" aria-modal="true" class="hidden">
       <div class="lightbox">
-        <button class="lightbox__close-btn" onclick="closeDialog(this)">
-          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+        <button class="lightbox__close-btn" onclick="closeDialog(this)" aria-label="close light box">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" focusable="false">
             <path
               d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
               fill="#69707D" fill-rule="evenodd" />
@@ -127,6 +173,16 @@
         </button>
         <div class="lightbox__preview">
           <img src="./images/image-product-1.jpg" alt="product 1 preview 1" />
+          <button class="lightbox__preview--previous" aria-label="previous image">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
+          <button class="lightbox__preview--next" aria-label="next image">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" focusable="false">
+              <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
         </div>
         <div class="lightbox__gallery">
           <button class="lightbox__gallery__item active">
