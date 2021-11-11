@@ -10,15 +10,14 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/index.css">
-  <script src="./js/dialog.js"></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__logo-nav">
       <div class="header__logo">
-        <button class="header__mobile-nav-menu">
-          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+        <button class="header__mobile-nav-menu" onclick="openSidebar()">
+          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg" focusable="false">
             <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
           </svg>
         </button>
@@ -52,10 +51,10 @@
       </button>
     </div>
   </header>
-  <aside class="sidebar active">
+  <aside class="sidebar" id="sidebar">
     <nav>
-      <button aria-label="close sidebar" class="close-btn">
-        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+      <button aria-label="close sidebar" class="close-btn" onclick="closeSidebar()">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" focusable="false">
           <path
             d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
             fill="#69707D" fill-rule="evenodd" />
@@ -86,7 +85,8 @@
       <section class="images">
         <div class="product__gallery">
           <div class="stage">
-            <button onclick="openDialog('lighthbox_dialog',this)" class="stage__img--active">
+            <button onclick="openLightBox('lighthbox_dialog',this)" class="stage__img--active"
+              data-curr_img="image-product-1.jpg">
               <img src="./images/image-product-1.jpg" alt="product 1 image" />
             </button>
             <button class="stage__img--prev" aria-label="previous image">
@@ -101,16 +101,16 @@
             </button>
           </div>
           <div class="altimages">
-            <button class="item active">
+            <button class="item active" data-fullimageurl="image-product-1.jpg">
               <img src="./images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail image" />
             </button>
-            <button class="item">
+            <button class="item" data-fullimageurl="image-product-2.jpg">
               <img src="./images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail image" />
             </button>
-            <button class="item">
+            <button class="item" data-fullimageurl="image-product-3.jpg">
               <img src="./images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail image" />
             </button>
-            <button class="item">
+            <button class="item" data-fullimageurl="image-product-4.jpg">
               <img src="./images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail image" />
             </button>
           </div>
@@ -172,7 +172,7 @@
           </svg>
         </button>
         <div class="lightbox__preview">
-          <img src="./images/image-product-1.jpg" alt="product 1 preview 1" />
+          <img src="./images/image-product-1.jpg" alt="product 1 preview 1" class="js-lightbox-preview" />
           <button class="lightbox__preview--previous" aria-label="previous image">
             <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" focusable="false">
               <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
@@ -206,6 +206,9 @@
     </div>
   </div>
   </div>
+  <script src="./js/dialog.js"></script>
+  <script src="./js/lightbox.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

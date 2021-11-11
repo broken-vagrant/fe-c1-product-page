@@ -5,6 +5,7 @@
   border-bottom: 1px solid $color-lightgrayish-blue;
   user-select: none;
   background: $color-white;
+  transition: border .2s ease;
 
   &__logo-nav {
     display: flex;
