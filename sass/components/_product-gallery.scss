@@ -5,7 +5,7 @@
     background: none;
     width: 100%;
     border: none;
-    &__img--active {
+    &--active {
       cursor: pointer;
       background: none;
       border: none;
@@ -13,7 +13,7 @@
           pointer-events: none;
       }
     }
-    &__img--prev,&__img--next {
+    &--previous,&--next {
       position: absolute;
       width: 4rem;
       height: 4rem;
@@ -31,12 +31,12 @@
         display: none;
       }
     }
-    &__img--prev {
+    &--previous {
       top: 49%;
       left: 10%;
       transform: translate(-50%,-50%);
     }
-    &__img--next {
+    &--next {
       top: 49%;
       right: 10%;
       transform: translate(50%,-50%);

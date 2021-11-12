@@ -4,7 +4,7 @@
   border: none;
   position: relative;
   max-width: 640px;
-  &__close-btn {
+  .close-btn {
     background: none;
     cursor: pointer;
     align-self: flex-end;
@@ -19,7 +19,7 @@
       fill: $color-primary;
     }
   }
-  &__preview {
+  .stage {
     position: relative;
     background: none;
     cursor: pointer;
@@ -57,13 +57,13 @@
       transform: translate(50%,-50%);
     }
   }
-  &__gallery {
+  .altimages {
     width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 2rem auto 0;
 
-    &__item {
+    .item {
       width: 7rem;
       height: 7rem;
       position: relative;
@@ -83,13 +83,13 @@
         border-radius: inherit;
       }
     }
-    &__item.active {
+    .item.active {
       border: 2px solid $color-primary;
     }
-    &__item.active .overlay {
+    .item.active .overlay {
       background: rgba(255, 255, 255, 0.589);
     }
-    &__item:hover .overlay {
+    .item:hover .overlay {
       background: rgba(255, 255, 255, 0.411);
     }
   }
