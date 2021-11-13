@@ -47,7 +47,7 @@ function previewLightBoxItem(that) {
   lightBoxStageEl.setAttribute("data-curr_img", that.dataset.fullimageurl);
   lightBoxStageEl.setAttribute("data-activeidx", that.dataset.idx);
 
-  lightBoxStageEl.src = "../images/" + that.dataset.fullimageurl;
+  lightBoxStageEl.src = "./images/" + that.dataset.fullimageurl;
 
   setActiveThumbnail(lightBoxThumbNails, that);
 }
