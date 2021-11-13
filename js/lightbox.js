@@ -15,7 +15,7 @@ function openLightBox(dialogId, that) {
   currLightboxIdx = that.dataset.activeidx;
 
   let currImg = that.dataset.curr_img;
-  lightBoxStageEl.src = "../images/" + currImg;
+  lightBoxStageEl.src = "./images/" + currImg;
   setActiveThumbnail(lightBoxThumbNails, lightBoxThumbNails[0]);
 
   openDialog(dialogId, that);
@@ -47,7 +47,7 @@ function previewLightBoxItem(that) {
   lightBoxStageEl.setAttribute("data-curr_img", that.dataset.fullimageurl);
   lightBoxStageEl.setAttribute("data-activeidx", that.dataset.idx);
 
-  lightBoxStageEl.src = "../images/" + that.dataset.fullimageurl;
+  lightBoxStageEl.src = "./images/" + that.dataset.fullimageurl;
 
   setActiveThumbnail(lightBoxThumbNails, that);
 }

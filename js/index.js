@@ -45,7 +45,7 @@ function previewGalleryItem(that) {
   galleryStageEl.setAttribute("data-curr_img", that.dataset.fullimageurl);
   galleryStageEl.setAttribute("data-activeidx", that.dataset.idx);
 
-  galleryStageEl.firstElementChild.src = "../images/" + that.dataset.fullimageurl;
+  galleryStageEl.firstElementChild.src = "./images/" + that.dataset.fullimageurl;
 
   setActiveThumbnail(galleryThumbnails, that)
 }
