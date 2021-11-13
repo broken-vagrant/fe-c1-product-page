@@ -5,7 +5,7 @@
   text-align: center;
   cursor: pointer;
   background-color: $color-primary;
-  color: white;
+  color: $color-white;
   padding: .7em 3em;
   border: 1px solid transparent;
   font-weight: bold;
@@ -22,7 +22,7 @@
   }
   &:hover {
     background: lighten($color-primary, 10%); 
-    box-shadow: 0 1px 1px hsla(0deg, 0% ,0% ,0.075),0 2px 2px hsla(0deg ,0%, 0% ,0.075),0 4px 4px hsla(0deg ,0%, 0%, 0.075),0 8px 8px hsla(0deg ,0%, 0% , 0.075),0 16px 16px hsla(0deg, 0% ,0%,  0.075);
+    box-shadow: $shadow-smooth-16;
   }
   &:hover:active {
     box-shadow: none;

@@ -39,7 +39,7 @@
       background: $color-lightergrayish-blue;
       border: 2px solid transparent;
       border-radius: 50%;
-      box-shadow: $shadow;
+      box-shadow: $shadow-smooth-8;
       color: $color-primary;
       cursor: pointer;
       &:hover > svg path{
@@ -87,10 +87,10 @@
       border: 2px solid $color-primary;
     }
     .item.active .overlay {
-      background: rgba(255, 255, 255, 0.589);
+      background: $color-gray-2;
     }
     .item:hover .overlay {
-      background: rgba(255, 255, 255, 0.411);
+      background: $color-gray-1;
     }
   }
 }

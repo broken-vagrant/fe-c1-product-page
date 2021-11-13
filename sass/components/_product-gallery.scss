@@ -21,7 +21,7 @@
       background: $color-lightergrayish-blue;
       border: 2px solid transparent;
       border-radius: 50%;
-      box-shadow: $shadow;
+      box-shadow: $shadow-smooth-8;
       color: $color-primary;
       cursor: pointer;
       &:hover > svg path{

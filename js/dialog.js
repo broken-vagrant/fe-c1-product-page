@@ -176,13 +176,13 @@ aria.Utils = aria.Utils || {};
    *          DOM node to focus when the dialog opens. If not specified, the
    *          first focusable element in the dialog will receive focus.
    */
-  aria.Dialog = function (dialogId, focusAfterClosed, focusFirst) {
+  aria.Dialog = function (dialogId, focusAfterClosed, focusFirst, isMenu) {
     this.dialogNode = document.getElementById(dialogId);
     if (this.dialogNode === null) {
       throw new Error('No element found with id="' + dialogId + '".');
     }
 
-    var validRoles = ['dialog', 'alertdialog'];
+    var validRoles = ['dialog', 'alertdialog', 'menu'];
     var isDialog = (this.dialogNode.getAttribute('role') || '')
       .trim()
       .split(/\s+/g)
@@ -199,7 +199,7 @@ aria.Utils = aria.Utils || {};
     // Wrap in an individual backdrop element if one doesn't exist
     // Native <dialog> elements use the ::backdrop pseudo-element, which
     // works similarly.
-    var backdropClass = 'dialog-backdrop';
+    var backdropClass = isMenu ? 'menudialog-backdrop' : 'dialog-backdrop';
     if (this.dialogNode.parentNode.classList.contains(backdropClass)) {
       this.backdropNode = this.dialogNode.parentNode;
     }
@@ -355,8 +355,8 @@ aria.Utils = aria.Utils || {};
     }
   }; // end trapFocus
 
-  window.openDialog = function (dialogId, focusAfterClosed, focusFirst) {
-    var dialog = new aria.Dialog(dialogId, focusAfterClosed, focusFirst);
+  window.openDialog = function (dialogId, focusAfterClosed, focusFirst, isMenu = false) {
+    var dialog = new aria.Dialog(dialogId, focusAfterClosed, focusFirst, isMenu);
   };
 
   window.closeDialog = function (closeButton) {
