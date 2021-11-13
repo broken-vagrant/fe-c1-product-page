@@ -15,7 +15,7 @@ function openLightBox(dialogId, that) {
   currLightboxIdx = that.dataset.activeidx;
 
   let currImg = that.dataset.curr_img;
-  lightBoxStageEl.src = "../images/" + currImg;
+  lightBoxStageEl.src = "./images/" + currImg;
   setActiveThumbnail(lightBoxThumbNails, lightBoxThumbNails[0]);
 
   openDialog(dialogId, that);
