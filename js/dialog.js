@@ -156,6 +156,12 @@ aria.Utils = aria.Utils || {};
       event.stopPropagation();
     }
   };
+  aria.handleOutsideClick = function (event) {
+    const currentDialog = aria.getCurrentDialog();
+    if (!currentDialog.dialogNode.contains(event.target)) {
+      currentDialog.close()
+    }
+  }
 
   document.addEventListener('keyup', aria.handleEscape);
 
@@ -332,10 +338,12 @@ aria.Utils = aria.Utils || {};
 
   aria.Dialog.prototype.addListeners = function () {
     document.addEventListener('focus', this.trapFocus, true);
+    document.addEventListener('click', aria.handleOutsideClick, true);
   }; // end addListeners
 
   aria.Dialog.prototype.removeListeners = function () {
     document.removeEventListener('focus', this.trapFocus, true);
+    document.removeEventListener('click', aria.handleOutsideClick, true);
   }; // end removeListeners
 
   aria.Dialog.prototype.trapFocus = function (event) {

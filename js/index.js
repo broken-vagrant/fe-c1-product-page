@@ -80,3 +80,18 @@ function showGalleryPrevItem() {
 }
 
 initGallery();
+
+// CART functionalities
+function deleteCartItem(that) {
+  var container = that.parentNode.parentNode;
+  var cartItemCount = container.childElementCount - 2;
+
+  that.parentNode.classList.add('hidden');
+
+  if (cartItemCount == 1) {
+    document.getElementById('checkoutBtn').classList.add('hidden');
+    document.querySelector(".jsCartEmpty").classList.remove("hidden");
+    container.classList.add('empty');
+    document.querySelector(".jsCartCount").classList.add('hidden');
+  }
+}
