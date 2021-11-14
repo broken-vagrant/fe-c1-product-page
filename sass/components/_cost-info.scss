@@ -27,5 +27,8 @@
     font-size: .6em;
     text-decoration: line-through;
     color: $color-darkgrayish-blue;
+    @media screen and (max-width: $vw-mobile-min) {
+      font-size: .8em;
+    }
   }
 }

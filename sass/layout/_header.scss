@@ -95,8 +95,8 @@
         border: 2px solid $color-primary;
       }
       @media screen  and (max-width: $vw-mobile-min) {
-        width: 2em;
-        height: 2em;
+        width: 2.2em;
+        height: 2.2em;
       }
     }
     @media screen  and (max-width: $vw-mobile-min){
@@ -115,6 +115,7 @@
   @media screen  and (max-width: $vw-mobile-min){
     padding: .5rem;
     height: auto;
+    min-height: 5rem;
     position: sticky;
     top: 0;
     z-index: 2;
