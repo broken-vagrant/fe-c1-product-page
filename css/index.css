@@ -107,8 +107,8 @@ p {
         border: 2px solid #ff7d1a; }
       @media screen and (max-width: 375px) {
         .header__usermenu--avatar {
-          width: 2em;
-          height: 2em; } }
+          width: 2.2em;
+          height: 2.2em; } }
     @media screen and (max-width: 375px) {
       .header__usermenu {
         font-size: .8rem; } }
@@ -124,6 +124,7 @@ p {
     .header {
       padding: .5rem;
       height: auto;
+      min-height: 5rem;
       position: sticky;
       top: 0;
       z-index: 2;
@@ -364,6 +365,9 @@ main {
     font-size: .6em;
     text-decoration: line-through;
     color: #68707d; }
+    @media screen and (max-width: 375px) {
+      .cost__info .actual-price {
+        font-size: .8em; } }
 
 .quant__adder {
   display: flex;
