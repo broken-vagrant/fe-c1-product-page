@@ -574,11 +574,11 @@ main {
       font-size: 1.3em;
       font-weight: bold;
       text-transform: uppercase; }
-    .product .details h1 {
+    .product .details h2 {
       font-size: 4em;
       margin: 1em 0; }
       @media screen and (max-width: 375px) {
-        .product .details h1 {
+        .product .details h2 {
           font-size: 3em;
           margin: 0.5em 0; } }
     .product .details p {
