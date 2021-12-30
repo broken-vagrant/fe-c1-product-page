@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   height: 10rem;
+  padding: 0 1rem;
   border-bottom: 1px solid $color-lightgrayish-blue;
   user-select: none;
   background: $color-white;
-  transition: border .2s ease;
+  transition: border 0.2s ease;
 
   &__logo-nav {
     display: flex;
@@ -25,7 +26,7 @@
       margin-left: 3rem;
     }
     a {
-      font-size: 1.4rem; 
+      font-size: 1.4rem;
       text-decoration: none;
       color: $color-darkgrayish-blue;
       height: inherit;
@@ -40,8 +41,8 @@
       &:hover {
         color: $color-darkblue;
       }
-      &:hover:after{
-       border-bottom: 3px solid $color-primary;
+      &:hover:after {
+        border-bottom: 3px solid $color-primary;
       }
     }
   }
@@ -53,7 +54,7 @@
     &--cart {
       width: 4em;
       height: 4em;
-      background: url($image-path+"/icon-cart.svg") no-repeat center;
+      background: url($image-path + "/icon-cart.svg") no-repeat center;
       border: none;
       margin-right: 1.5em;
       cursor: pointer;
@@ -63,18 +64,18 @@
         position: absolute;
         right: 1em;
         top: 1em;
-        font-size: .7em;
-        padding: .1em .6em;
+        font-size: 0.7em;
+        padding: 0.1em 0.6em;
         font-weight: bold;
         border-radius: 40%;
         background-color: $color-primary;
         color: $color-white;
-        @media screen and (max-width: $vw-mobile-min) {
-          right: -.3em;
-          top: -.3em;
+        @media screen and (max-width: $vw-md) {
+          right: -0.3em;
+          top: -0.3em;
         }
       }
-      @media screen  and (max-width: $vw-mobile-min) {
+      @media screen and (max-width: $vw-md) {
         width: 2em;
         height: 2em;
       }
@@ -94,26 +95,26 @@
       &:active {
         border: 2px solid $color-primary;
       }
-      @media screen  and (max-width: $vw-mobile-min) {
+      @media screen and (max-width: $vw-md) {
         width: 2.2em;
         height: 2.2em;
       }
     }
-    @media screen  and (max-width: $vw-mobile-min){
-      font-size: .8rem;
+    @media screen and (max-width: $vw-md) {
+      font-size: 0.8rem;
     }
   }
   &__mobile-nav-menu {
     background: none;
     border: 0;
     display: none;
-    padding: .5rem;
-    margin-right: .6rem;
-    margin-top: .6rem;
+    padding: 0.5rem;
+    margin-right: 0.6rem;
+    margin-top: 0.6rem;
     cursor: pointer;
   }
-  @media screen  and (max-width: $vw-mobile-min){
-    padding: .5rem;
+  @media screen and (max-width: $vw-md) {
+    padding: 0.5rem;
     height: auto;
     min-height: 5rem;
     position: sticky;

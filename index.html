@@ -83,7 +83,7 @@
   <div class="sidebar_scrim" role="presentation"></div>
   <main>
     <div class="product">
-      <section class="images">
+      <div class="images">
         <div class="product__gallery">
           <div class="stage">
             <button onclick="openLightBox('lighthbox_dialog',this)" class="stage--active jsPgStage"
@@ -116,7 +116,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </div>
       <section class="details">
         <div class="details__company">
           SNEAKER COMPANY
@@ -139,9 +139,9 @@
         <div class="details__addquant">
           <div class="container">
             <div class="quant__adder">
-              <button class="quant__adder--minus"></button>
-              <span>3</span>
-              <button class="quant__adder--plus"></button>
+              <button class="quant__adder--minus" aria-label="add 1 Fall Limited Edition Sneakers to cart"></button>
+              <span><span class="sr-only">Quantity</span>3 </span>
+              <button class="quant__adder--plus" aria-label="remove 1 Fall Limited Edition Sneakers from cart"></button>
             </div>
           </div>
           <div class="container">
@@ -204,7 +204,7 @@
         </div>
       </div>
     </div>
-    <div id="menu_dialog" role="menu" aria-label="cart items" aria-modal="true" class="hidden">
+    <div id="menu_dialog" role="menu" aria-label="cart items" class="hidden">
       <div class="cart-menu">
         <div class="cart-menu__header">Cart</div>
         <div class="cart-menu__body">

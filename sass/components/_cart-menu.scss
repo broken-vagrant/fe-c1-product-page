@@ -5,9 +5,9 @@
   right: 10%;
   top: 15%;
   box-shadow: $shadow-smooth-24;
-  border-radius: .5em;
+  border-radius: 0.5em;
   background: $color-white;
-  @media screen and (max-width: $vw-mobile-min) {
+  @media screen and (max-width: $vw-sm) {
     width: 96%;
     top: 10%;
     right: 2%;
@@ -34,7 +34,7 @@
     img {
       width: 100%;
       object-fit: fill;
-      border-radius: .4em;
+      border-radius: 0.4em;
     }
   }
   &__empty {
@@ -54,8 +54,8 @@
       color: $color-darkgrayish-blue;
       flex-basis: 70%;
       &--name {
-        padding-bottom: .5em;
-        @media screen and (max-width: $vw-mobile-min){
+        padding-bottom: 0.5em;
+        @media screen and (max-width: $vw-sm) {
           text-overflow: ellipsis;
           max-width: 200px;
           overflow: hidden;

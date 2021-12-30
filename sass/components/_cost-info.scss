@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  @media screen and (max-width: $vw-mobile-min) {
+  @media screen and (max-width: $vw-sm) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -14,21 +14,21 @@
     font-weight: 700;
   }
   .discount {
-    font-size: .54em;
+    font-size: 0.54em;
     font-weight: 700;
-    padding: .4em .6em;
-    margin-top: .3em;
-    margin-left: .7em;
-    border-radius: .2em;
+    padding: 0.4em 0.6em;
+    margin-top: 0.3em;
+    margin-left: 0.7em;
+    border-radius: 0.2em;
     color: $color-primary;
     background-color: $color-primary-light;
   }
   .actual-price {
-    font-size: .6em;
+    font-size: 0.6em;
     text-decoration: line-through;
     color: $color-darkgrayish-blue;
-    @media screen and (max-width: $vw-mobile-min) {
-      font-size: .8em;
+    @media screen and (max-width: $vw-sm) {
+      font-size: 0.8em;
     }
   }
 }

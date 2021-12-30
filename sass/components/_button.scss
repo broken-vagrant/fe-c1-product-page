@@ -1,27 +1,28 @@
 .btn {
   font-size: 1.5rem;
   vertical-align: middle;
-  border-radius: .5em;
+  border-radius: 0.5em;
   text-align: center;
   cursor: pointer;
   background-color: $color-primary;
   color: $color-white;
-  padding: .7em 3em;
+  padding: 0.2em 3em;
+  height: 50px;
   border: 1px solid transparent;
   font-weight: bold;
   position: relative;
   user-select: none;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   width: 100%;
   svg {
-    margin: 0 .2em;
+    margin: 0 0.2em;
     vertical-align: top;
   }
   svg path {
     fill: currentColor;
   }
   &:hover {
-    background: lighten($color-primary, 10%); 
+    background: lighten($color-primary, 10%);
     box-shadow: $shadow-smooth-16;
   }
   &:hover:active {

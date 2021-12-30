@@ -1,14 +1,23 @@
 .product {
   font-size: 1rem;
-  margin-bottom: 2rem;
-  @media screen and (max-width: $vw-mobile-min){
-    font-size: .7rem;
+  position: relative;
+  margin: 4rem 0rem 2rem;
+  @media screen and (max-width: $vw-xl) {
+    margin: 4rem 1rem 2rem;
+  }
+  @media screen and (max-width: $vw-sm) {
+    font-size: 0.7rem;
+    margin: 0 0 2rem;
   }
   .images {
     width: 45%;
     float: left;
     padding-right: 8em;
-    @media screen and (max-width: $vw-mobile-min) {
+    @media screen and (max-width: $vw-lg) {
+      padding-right: 4em;
+      width: 50%;
+    }
+    @media screen and (max-width: $vw-sm) {
       width: 100%;
       float: unset;
       display: block;
@@ -16,12 +25,15 @@
     }
   }
   .details {
-    width: 45%;
+    width: calc(100% - 45% - 8em);
     float: left;
     display: flex;
     flex-direction: column;
     padding: 4em 0 2em;
-    @media screen and (max-width: $vw-mobile-min) {
+    @media screen and (max-width: $vw-lg) {
+      width: calc(100% - 50% - 4em);
+    }
+    @media screen and (max-width: $vw-sm) {
       width: 100%;
       float: unset;
       display: block;
@@ -29,25 +41,29 @@
     }
     &__company {
       color: $color-primary;
-      letter-spacing: .2em;
+      letter-spacing: 0.2em;
       font-size: 1.3em;
       font-weight: bold;
       text-transform: uppercase;
     }
     h2 {
       font-size: 4em;
-      margin: 1em 0;
+      margin-top: 1em;
 
-      @media screen and (max-width: $vw-mobile-min){
+      @media screen and (max-width: $vw-lg) {
+        font-size: 3.5em;
+        margin-top: 0.8em;
+      }
+      @media screen and (max-width: $vw-sm) {
         font-size: 3em;
-        margin: .5em 0;
+        margin-top: 0.5em;
       }
     }
     p {
       color: $color-darkgrayish-blue;
       margin: 2em 0;
 
-      @media screen and (max-width: $vw-mobile-min){
+      @media screen and (max-width: $vw-sm) {
         margin: 1.5em 0 2em;
         font-size: 2em;
       }
@@ -61,8 +77,8 @@
       }
       .container + .container {
         margin-left: 1em;
-      } 
-      @media screen  and (max-width: $vw-mobile-min){
+      }
+      @media screen and (max-width: $vw-lg) {
         flex-direction: column;
         .container {
           width: 100%;
@@ -71,8 +87,13 @@
         .container + .container {
           margin-left: 0;
           margin-top: 2em;
-        } 
+        }
       }
     }
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }

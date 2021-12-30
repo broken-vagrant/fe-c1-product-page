@@ -4,13 +4,16 @@
   border: none;
   position: relative;
   max-width: 640px;
+  @media screen and (max-width: $vw-md) {
+    margin-top: 7rem;
+  }
   .close-btn {
     background: none;
     cursor: pointer;
     align-self: flex-end;
     border: none;
     transform: scale(1.5);
-    padding: .5rem;
+    padding: 0.5rem;
     z-index: 1;
     svg path {
       fill: $color-lightergrayish-blue;
@@ -31,7 +34,8 @@
       object-fit: fill;
       object-position: center;
     }
-    &--previous,&--next {
+    &--previous,
+    &--next {
       position: absolute;
       width: 4rem;
       height: 4rem;
@@ -42,19 +46,19 @@
       box-shadow: $shadow-smooth-8;
       color: $color-primary;
       cursor: pointer;
-      &:hover > svg path{
+      &:hover > svg path {
         stroke: $color-primary;
       }
     }
     &--previous {
       top: 49%;
       left: 0;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
     &--next {
       top: 49%;
       right: 0;
-      transform: translate(50%,-50%);
+      transform: translate(50%, -50%);
     }
   }
   .altimages {
@@ -71,7 +75,7 @@
       border-radius: 1.1rem;
       background: none;
       border: 2px solid transparent;
-      transition: opacity .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: opacity 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       img {
         width: 100%;
         object-fit: fill;
