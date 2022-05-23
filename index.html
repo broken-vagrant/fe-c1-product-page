@@ -44,7 +44,7 @@
       </nav>
     </div>
     <div class="header__usermenu">
-      <button type="button" class="header__usermenu--cart" onclick="openDialog('menu_dialog',this,null,true)">
+      <button id="cart-menu-button" type="button" class="header__usermenu--cart">
         <span class="count jsCartCount">3</span>
       </button>
       <button type="button" class="header__usermenu--avatar">
@@ -83,7 +83,7 @@
   <div class="sidebar_scrim" role="presentation"></div>
   <main>
     <div class="product">
-      <div class="images">
+      <div class="product__images">
         <div class="product__gallery">
           <div class="stage">
             <button onclick="openLightBox('lighthbox_dialog',this)" class="stage--active jsPgStage"
@@ -117,8 +117,8 @@
           </div>
         </div>
       </div>
-      <section class="details">
-        <div class="details__company">
+      <section class="product__details">
+        <div class="manufacturer">
           SNEAKER COMPANY
         </div>
         <h2>Fall Limited Edition Sneakers</h2>
@@ -136,15 +136,15 @@
             <span class="actual-price">$250.00</span>
           </div>
         </div>
-        <div class="details__addquant">
-          <div class="container">
+        <div class="adder">
+          <div class="adder__inner">
             <div class="quant__adder">
               <button class="quant__adder--minus" aria-label="add 1 Fall Limited Edition Sneakers to cart"></button>
               <span><span class="sr-only">Quantity</span>3 </span>
               <button class="quant__adder--plus" aria-label="remove 1 Fall Limited Edition Sneakers from cart"></button>
             </div>
           </div>
-          <div class="container">
+          <div class="adder__inner">
             <button class="btn">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -164,7 +164,7 @@
   <div id="modalRoot">
     <div id="lighthbox_dialog" role="dialog" aria-label="product gallery lightbox" aria-modal="true" class="hidden">
       <div class="lightbox">
-        <button class="close-btn jsLbCloseBtn" onclick="closeDialog(this)" aria-label="close light box">
+        <button class="close-btn jsLbCloseBtn" onclick="closeDialog(this)" aria-label="close product light box">
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" focusable="false">
             <path
               d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
@@ -204,8 +204,8 @@
         </div>
       </div>
     </div>
-    <div id="menu_dialog" role="menu" aria-label="cart items" class="hidden">
-      <div class="cart-menu">
+    <div id="menu_dialog" role="menu" aria-label="cart items" class="hidden" aria-modal="true">
+      <div class="cart-menu" id="cart-menu">
         <div class="cart-menu__header">Cart</div>
         <div class="cart-menu__body">
           <div class="cart-menu__item">
@@ -217,7 +217,7 @@
               <div>
                 <span class="jsItemCost">$125.00</span>
                 <span>x</span>
-                <span class="jsItemCount">3</span>
+                <span class="jsItemCount">3 = </span>
                 <span class="cart-menu__item__info--totalcost jsTotalCost">$375.00</span>
               </div>
             </div>
@@ -247,6 +247,7 @@
   <script src="./js/utils.js"></script>
   <script src="./js/dialog.js"></script>
   <script src="./js/lightbox.js"></script>
+  <script src="./js/menu.js"></script>
   <script src="./js/index.js"></script>
 </body>
 
