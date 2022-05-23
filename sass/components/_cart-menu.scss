@@ -6,16 +6,15 @@
   top: 15%;
   box-shadow: $shadow-smooth-24;
   border-radius: 0.5em;
-  background: $color-white;
+  background: $colors-white;
   @media screen and (max-width: $vw-sm) {
     width: 96%;
-    top: 10%;
-    right: 2%;
     left: auto;
+    right: 2%;
   }
   &__header {
     padding: 1.3rem;
-    border-bottom: 1px solid $color-lightgrayish-blue;
+    border-bottom: 1px solid $colors-slate7;
     font-size: 1.5em;
     font-weight: bold;
   }
@@ -38,9 +37,9 @@
     }
   }
   &__empty {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: $color-darkgrayish-blue;
+    color: $colors-slate11;
   }
   &__item {
     font-size: 1rem;
@@ -50,8 +49,8 @@
     justify-content: space-between;
 
     &__info {
-      font-size: 1.3rem;
-      color: $color-darkgrayish-blue;
+      font-size: 1.5rem;
+      color: $colors-slate11;
       flex-basis: 70%;
       &--name {
         padding-bottom: 0.5em;
@@ -63,7 +62,7 @@
         }
       }
       &--totalcost {
-        color: $color-black;
+        color: $colors-black;
         font-weight: bold;
       }
     }

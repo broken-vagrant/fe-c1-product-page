@@ -1,23 +1,29 @@
 // COLORS
-$color-primary: hsl(26, 100%, 55%);
-$color-primary-light: hsl(25, 100%, 94%);
+// reference: https://www.radix-ui.com/colors
+$colors-orange4: hsl(25, 100%, 92.2%);
+$colors-orange7: hsl(24, 100%, 75.3%);
+$colors-orange8: hsl(24, 94.5%, 64.3%);
+$colors-orange9: hsl(24, 94%, 50%);
+$colors-orange10: hsl(24, 100%, 46.5%);
+$colors-orange11: hsl(24, 100%, 37%);
 
-// blue-variants
-$color-darkblue: hsl(220, 13%, 13%);
-$color-darkgrayish-blue: hsl(219, 9%, 45%);
-$color-grayish-blue: hsl(220, 14%, 75%);
-$color-lightgrayish-blue: hsl(220, 11%, 89%);
-$color-lightergrayish-blue: hsl(223, 64%, 98%);
+$colors-blue12: hsl(211, 100%, 15%);
 
-// sidebar backdrop
-$color-sidebar-backdrop: rgba(0, 0, 0, 0.32);
+$colors-slate4: hsl(209, 12.2%, 93.2%);
+$colors-slate5: hsl(208, 11.7%, 91.1%);
+$colors-slate6: hsl(208, 11.3%, 88.9%);
+$colors-slate7: hsl(207, 11.1%, 85.9%);
+$colors-slate8: hsl(205, 10.7%, 78%);
+$colors-slate9: hsl(206, 6%, 56.1%);
+$colors-slate10: hsl(206, 5.8%, 52.3%);
+$colors-slate11: hsl(206, 6%, 43.5%);
 
-// overlay colors
-$color-gray-1: rgba(255, 255, 255, 0.589);
-$color-gray-2: rgba(255, 255, 255, 0.411);
+$colors-gray8: hsl(0, 0%, 78%);
+$colors-gray9: hsl(0, 0%, 56.1%);
+$colors-gray12: hsl(0, 0%, 9%);
 
-$color-white: hsl(0, 0%, 100%);
-$color-black: hsl(0, 0%, 0%);
+$colors-white: hsl(0, 0%, 100%);
+$colors-black: hsl(0, 0%, 0%);
 
 // FONT
 $default-font-size: 1.6rem;
@@ -45,3 +51,7 @@ $shadow-smooth-24: 0 1px 1px hsla(0deg, 0%, 0%, 0.08),
   0 2px 2px hsla(0deg, 0%, 0%, 0.08), 0 4px 4px hsla(0deg, 0%, 0%, 0.08),
   0 8px 8px hsla(0deg, 0%, 0%, 0.08), 0 16px 16px hsla(0deg, 0%, 0%, 0.08),
   0 24px 24px hsla(0, 0%, 0%, 0.08);
+
+$colors-focus1: rgba(0, 144, 237, 0.4);
+
+$focus1: 0px 0px 0px 3px $colors-focus1;

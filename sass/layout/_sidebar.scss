@@ -1,5 +1,5 @@
 .sidebar {
-  background: $color-white;
+  background: $colors-white;
   height: 100%;
   position: fixed;
   right: auto;
@@ -9,9 +9,8 @@
   z-index: 20;
   max-width: 20rem;
   transform: translateX(-100%);
-  transition: transform 100ms ease-out;
+  transition: transform 300ms ease-out;
   padding: 1.2rem;
-  visibility: hidden;
 
   .close-btn {
     padding: 1rem;
@@ -31,21 +30,20 @@
       padding: 0 1rem;
     }
     &-item + &-item {
-      margin-top: .9rem;
+      margin-top: 0.9rem;
     }
     a {
-      color: $color-darkblue;
+      color: $colors-blue12;
       text-decoration: none;
       padding: 1rem 0;
     }
   }
 }
 .sidebar.active {
-  visibility: visible;
   transform: translateX(0%);
 }
 .sidebar.active + .sidebar_scrim {
-  background-color: $color-sidebar-backdrop;
+  background-color: $colors-gray12;
   display: block;
 }
 .sidebar_scrim {

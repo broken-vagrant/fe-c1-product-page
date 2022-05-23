@@ -1,32 +1,33 @@
 .quant__adder {
   display: flex;
   align-items: center;
-  background-color: $color-lightergrayish-blue;
+  background-color: $colors-slate4;
   font-size: 1rem;
-  border-radius: .5em;
+  border-radius: 0.5em;
   width: 100%;
   justify-content: space-between;
-  &--minus,&--plus {
-    border-radius: .5em;
+  &--minus,
+  &--plus {
+    border-radius: 0.5em;
     padding: 1.5em 1.3em;
     width: 1em;
     height: 1em;
     border: none;
-    color: $color-primary;
+    color: $colors-orange9;
     font-weight: 400;
     cursor: pointer;
     &:hover {
-      background-color: $color-lightgrayish-blue;
+      background-color: $colors-slate7;
     }
-    &:active{
-      background-color: $color-grayish-blue;
+    &:active {
+      background-color: $colors-slate8;
     }
   }
   &--minus {
-    background: url($image-path + "/icon-minus.svg") no-repeat center;  
+    background: url($image-path + "/icon-minus.svg") no-repeat center;
   }
   &--plus {
-    background: url($image-path + "/icon-plus.svg") no-repeat center;  
+    background: url($image-path + "/icon-plus.svg") no-repeat center;
   }
   span {
     min-width: 6ch;

@@ -9,7 +9,7 @@
     font-size: 0.7rem;
     margin: 0 0 2rem;
   }
-  .images {
+  &__images {
     width: 45%;
     float: left;
     padding-right: 8em;
@@ -24,7 +24,7 @@
       padding: 0;
     }
   }
-  .details {
+  &__details {
     width: calc(100% - 45% - 8em);
     float: left;
     display: flex;
@@ -39,8 +39,8 @@
       display: block;
       padding: 1em;
     }
-    &__company {
-      color: $color-primary;
+    .manufacturer {
+      color: $colors-orange9;
       letter-spacing: 0.2em;
       font-size: 1.3em;
       font-weight: bold;
@@ -60,31 +60,32 @@
       }
     }
     p {
-      color: $color-darkgrayish-blue;
+      color: $colors-slate11;
       margin: 2em 0;
+      font-size: 2em;
 
       @media screen and (max-width: $vw-sm) {
         margin: 1.5em 0 2em;
         font-size: 2em;
       }
     }
-    &__addquant {
+    .adder {
       margin-top: 2em;
       display: flex;
       align-items: center;
-      .container {
+      &__inner {
         flex-grow: 0;
       }
-      .container + .container {
+      .adder__inner + .adder__inner {
         margin-left: 1em;
       }
       @media screen and (max-width: $vw-lg) {
         flex-direction: column;
-        .container {
+        &__inner {
           width: 100%;
           flex-grow: 1;
         }
-        .container + .container {
+        .adder__inner + .adder__inner {
           margin-left: 0;
           margin-top: 2em;
         }

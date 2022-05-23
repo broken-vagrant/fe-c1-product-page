@@ -20,13 +20,13 @@
     margin-top: 0.3em;
     margin-left: 0.7em;
     border-radius: 0.2em;
-    color: $color-primary;
-    background-color: $color-primary-light;
+    color: $colors-orange9;
+    background-color: $colors-orange4;
   }
   .actual-price {
     font-size: 0.6em;
     text-decoration: line-through;
-    color: $color-darkgrayish-blue;
+    color: $colors-slate11;
     @media screen and (max-width: $vw-sm) {
       font-size: 0.8em;
     }

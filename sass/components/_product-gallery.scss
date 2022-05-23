@@ -24,14 +24,14 @@
       width: 4em;
       height: 4em;
       padding: 1em;
-      background: $color-lightergrayish-blue;
+      background: $colors-slate7;
       border: 2px solid transparent;
       border-radius: 50%;
       box-shadow: $shadow-smooth-8;
-      color: $color-primary;
+      color: $colors-orange9;
       cursor: pointer;
       &:hover > svg path {
-        stroke: $color-primary;
+        stroke: $colors-orange9;
       }
       @media screen and (min-width: $vw-sm) {
         display: none;
@@ -89,7 +89,7 @@
     }
   }
   .item.active {
-    border: 2px solid $color-primary;
+    border: 4px solid $colors-orange9;
   }
   .item.active img {
     opacity: 0.3;

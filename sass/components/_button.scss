@@ -4,8 +4,8 @@
   border-radius: 0.5em;
   text-align: center;
   cursor: pointer;
-  background-color: $color-primary;
-  color: $color-white;
+  background-color: $colors-orange9;
+  color: $colors-white;
   padding: 0.2em 3em;
   height: 50px;
   border: 1px solid transparent;
@@ -22,7 +22,7 @@
     fill: currentColor;
   }
   &:hover {
-    background: lighten($color-primary, 10%);
+    background: lighten($colors-orange9, 10%);
     box-shadow: $shadow-smooth-16;
   }
   &:hover:active {

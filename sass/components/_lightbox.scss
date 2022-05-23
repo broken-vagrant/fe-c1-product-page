@@ -16,10 +16,10 @@
     padding: 0.5rem;
     z-index: 1;
     svg path {
-      fill: $color-lightergrayish-blue;
+      fill: $colors-slate7;
     }
     &:hover > svg path {
-      fill: $color-primary;
+      fill: $colors-orange9;
     }
   }
   .stage {
@@ -40,14 +40,14 @@
       width: 4rem;
       height: 4rem;
       padding: 1rem;
-      background: $color-lightergrayish-blue;
+      background: $colors-slate7;
       border: 2px solid transparent;
       border-radius: 50%;
       box-shadow: $shadow-smooth-8;
-      color: $color-primary;
+      color: $colors-orange9;
       cursor: pointer;
       &:hover > svg path {
-        stroke: $color-primary;
+        stroke: $colors-orange9;
       }
     }
     &--previous {
@@ -88,13 +88,15 @@
       }
     }
     .item.active {
-      border: 2px solid $color-primary;
+      border: 4px solid $colors-orange10;
     }
     .item.active .overlay {
-      background: $color-gray-2;
+      background: $colors-gray9;
+      opacity: 0.5;
     }
     .item:hover .overlay {
-      background: $color-gray-1;
+      background: $colors-gray8;
+      opacity: 0.5;
     }
   }
 }

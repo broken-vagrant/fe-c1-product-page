@@ -3,32 +3,33 @@
   justify-content: space-between;
   height: 10rem;
   padding: 0 1rem;
-  border-bottom: 1px solid $color-lightgrayish-blue;
+  border-bottom: 1px solid $colors-slate7;
   user-select: none;
-  background: $color-white;
+  background: $colors-white;
   transition: border 0.2s ease;
+  font-size: 1.5rem;
 
   &__logo-nav {
     display: flex;
     align-items: center;
   }
   &__logo {
-    font-size: 1.4rem;
+    font-size: 1em;
     display: flex;
     align-items: center;
   }
   &__nav {
-    margin-left: 4rem;
+    margin-left: 2.5em;
     height: 100%;
     display: flex;
     align-items: center;
     > a + a {
-      margin-left: 3rem;
+      margin-left: 2em;
     }
     a {
-      font-size: 1.4rem;
+      font-size: 1.1em;
       text-decoration: none;
-      color: $color-darkgrayish-blue;
+      color: $colors-slate11;
       height: inherit;
       display: flex;
       align-items: center;
@@ -39,21 +40,20 @@
         inset: 0;
       }
       &:hover {
-        color: $color-darkblue;
+        color: $colors-blue12;
       }
       &:hover:after {
-        border-bottom: 3px solid $color-primary;
+        border-bottom: 3px solid $colors-orange9;
       }
     }
   }
   &__usermenu {
     display: flex;
     align-items: center;
-    font-size: 1rem;
 
     &--cart {
-      width: 4em;
-      height: 4em;
+      width: 5em;
+      height: 5em;
       background: url($image-path + "/icon-cart.svg") no-repeat center;
       border: none;
       margin-right: 1.5em;
@@ -64,12 +64,12 @@
         position: absolute;
         right: 1em;
         top: 1em;
-        font-size: 0.7em;
+        font-size: 0.9em;
         padding: 0.1em 0.6em;
         font-weight: bold;
         border-radius: 40%;
-        background-color: $color-primary;
-        color: $color-white;
+        background-color: $colors-orange9;
+        color: $colors-white;
         @media screen and (max-width: $vw-md) {
           right: -0.3em;
           top: -0.3em;
@@ -93,7 +93,7 @@
         object-fit: fill;
       }
       &:active {
-        border: 2px solid $color-primary;
+        border: 2px solid $colors-orange9;
       }
       @media screen and (max-width: $vw-md) {
         width: 2.2em;
